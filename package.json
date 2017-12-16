@@ -1,0 +1,24 @@
+{
+  "name": "suggestme-api",
+  "version": "1.0.0",
+  "description": "This repository contains the API development for the application suggestme.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthew678532/suggestme-api.git"
+  },
+  "keywords": [
+    "suggestme",
+    "api",
+    "node"
+  ],
+  "author": "Matthew L. Birch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matthew678532/suggestme-api/issues"
+  },
+  "homepage": "https://github.com/matthew678532/suggestme-api#readme"
+}
