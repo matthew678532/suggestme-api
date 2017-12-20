@@ -38,6 +38,23 @@ module.exports = {
     "no-unsafe-finally": "error",
     "no-unsafe-negation": "error",
     "use-isnan": "error",
-    "valid-typeof": "error"
+    "valid-typeof": "error",
+
+    "block-scoped-var": "error",
+    "array-callback-return": "warn",
+    "complexity": ["error", {max: 5}],
+    "default-case": ["error", {"commentPattern": "^skip\\sdefault"}],
+    "dot-notation": "warn",
+    "eqeqeq": ["error", "smart"],
+    "guard-for-in": "warn",
+    "no-alert": "error",
+    "no-caller": "error",
+    "no-case-declaration": "error",
+    "no-div-regex": "warn",
+    "no-empty-function": "error",
+    "no-empty-pattern": "warn",
+    "no-eq-null": "error",
+    "no-eval": "error",
+    "no-extra-bind": "warn"
   }
 };
