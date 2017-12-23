@@ -55,6 +55,16 @@ module.exports = {
     "no-empty-pattern": "warn",
     "no-eq-null": "error",
     "no-eval": "error",
-    "no-extra-bind": "warn"
+    "no-extra-bind": "warn",
+    "no-fallthrough": "warn",
+    "no-floating-decimal": "error",
+    "no-global-assign": "error",
+    "no-implicit-coercion": "error",
+    "no-implied-eval": "error",
+    "no-invalid-this": "error",
+    "no-iterator": "error",
+    "no-labels": "error",
+    "no-lone-blocks": "error",
+    "no-loop-func": "error"
   }
 };
