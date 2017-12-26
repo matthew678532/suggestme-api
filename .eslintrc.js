@@ -172,6 +172,55 @@ module.exports = {
     "spaced-comment": [1, "always"],
     "switch-colon-spacing": [1, {"after": true, "before": false}],
     "template-tag-spacing": [2, "never"],
-    "wrap-regex": 1
+    "wrap-regex": 1,
+
+    "arrow-body-style": [1, "as-needed", {
+       "requireReturnForObjectLiteral": true
+    }],
+    "arrow-parens": [1, "as-needed", {"requireForBlockBody": true}],
+    "arrow-spacing": [1, {"before": true, "after": true}],
+    "constructor-super": 2,
+    "generator-star-spacing": [1, {
+      "before": false,
+      "after": true,
+      "anonymous": "neither"
+    }],
+    "no-class-assign": 2,
+    "no-confusing-arrow": [1, {"allowParens": true}],
+    "no-const-assign": 2,
+    "no-dupe-class-members": 2,
+    "no-duplicate-imports": [2, {"includeExports": true}],
+    "no-new-symbol": 2,
+    "no-this-before-super": 2,
+    "no-useless-computed-key", 2,
+    "no-useless-constructor": 2,
+    "no-useless-rename": 2,
+    "no-var": 1,
+    "object-shorthand": [1, "properties"],
+    "prefer-arrow-callback": [1, {
+      "allowNamedFunctions": false,
+      "allowUnboundThis": true
+    }],
+    "prefer-const": [1, {
+      "destructuring": "any",
+      "ignoreReadBeforeAssign": false
+    }],
+    "prefer-rest-params": 1,
+    "prefer-spread": 1,
+    "prefer-template": 1,
+    "require-yeild": 2,
+    "rest-spread-spacing": [1, "never"],
+    "sort-imports": [1, {
+      "ignoreCase": true,
+      "ignoreMemberSort": true,
+      "memberSyntaxOrder": [
+        "none",
+        "single",
+        "multiple",
+        "all"
+      ]
+    }],
+    "template-curly-spacing": [1, "never"],
+    "yield-star-spacing": [1, "after"]
   }
 };
