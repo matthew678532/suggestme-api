@@ -1,0 +1,8 @@
+--colors
+--bail
+--use_strict
+--require ./test/setup.js
+--reporter spec
+--ui bdd
+--timeout 500
+--retries 1
