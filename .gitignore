@@ -1,8 +1,7 @@
-logs
+logs/
 *.log
 npm-debug.log*
 .npm
 node_modules/
-docs
-template
+docs/
 testfile.js
