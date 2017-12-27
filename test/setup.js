@@ -1,3 +1,4 @@
-import {expect} from 'chai'
+import * as chai from 'chai'
 
-global.expect = expect
+global.expect = chai.expect
+global.assert = chai.assert
