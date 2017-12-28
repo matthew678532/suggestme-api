@@ -25,6 +25,9 @@
     "restify": "^6.3.4"
   },
   "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
     "chai": "^4.1.2",
     "eslint": "^4.13.1",
     "gulp": "^3.9.1",
