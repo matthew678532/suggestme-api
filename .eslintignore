@@ -2,3 +2,4 @@ node_modules/
 testfile.js
 template/
 docs/
+dist/
