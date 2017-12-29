@@ -5,6 +5,5 @@
 --ui bdd
 --timeout 500
 --retries 1
---require babel-polyfill
 --require babel-register
 --require ./test/setup.js
