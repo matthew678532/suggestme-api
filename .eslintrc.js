@@ -103,7 +103,7 @@ module.exports = {
     "no-unused-vars": 1,
     "no-use-before-define": 1,
 
-    "indent": [2, 4],
+    "indent": [2, 2],
     "linebreak-style": [1, "windows"],
     "quotes": [2, "single"],
     "semi": [2, "never"],
