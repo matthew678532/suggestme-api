@@ -1,6 +1,5 @@
 'use strict'
 
-import config from './gulp/gulp.config.js'
 import * as tasks from './gulp/tasks.js'
 import gulp from 'gulp'
 
