@@ -150,7 +150,6 @@ module.exports = {
     "no-unneeded-ternary": 1,
     "no-whitespace-before-property": 2,
     "nonblock-statement-body-position": [1, "beside"],
-    "object-curly-spacing": [1, "never"],
     "one-var": [1, {"const": "never"}],
     "one-var-declaration-per-line": [1, "always"],
     "operator-linebreak": [1, "before"],
@@ -210,16 +209,6 @@ module.exports = {
     "prefer-template": 1,
     "require-yield": 2,
     "rest-spread-spacing": [1, "never"],
-    "sort-imports": [1, {
-      "ignoreCase": true,
-      "ignoreMemberSort": true,
-      "memberSyntaxSortOrder": [
-        "none",
-        "single",
-        "multiple",
-        "all"
-      ]
-    }],
     "template-curly-spacing": [1, "never"],
     "yield-star-spacing": [1, "after"]
   }
