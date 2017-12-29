@@ -22,16 +22,16 @@
   },
   "homepage": "https://github.com/matthew678532/suggestme-api#readme",
   "dependencies": {
-    "require-dir": "^0.3.2",
     "restify": "^6.3.4"
   },
   "devDependencies": {
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
-    "eslint": "^4.13.1",
+    "fancy-log": "^1.3.2",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.0",
+    "gulp-eslint": "^4.0.0",
     "gulp-mocha": "^4.3.1",
     "pump": "^2.0.0"
   }

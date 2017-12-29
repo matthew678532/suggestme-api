@@ -3,5 +3,7 @@ import { root } from './../global.config.js'
 export default {
   // Config options go here
   SRC_MODULE: `${root}/src/module/**/*.js`,
-  DIST: `${root}/dist`
+  DIST: `${root}/dist`,
+  NODE_MODULES: `${root}/node_modules/**`,
+  ESLINT_CONFIG: `${root}/.eslintrc.js`
 }
