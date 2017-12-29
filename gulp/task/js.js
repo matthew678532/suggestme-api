@@ -1,4 +1,4 @@
-import { config, util, gulp, pump } from '../core'
+import { config, util, gulp, pump } from '../core.js'
 import babel from 'gulp-babel'
 
 export default function js(cb) {

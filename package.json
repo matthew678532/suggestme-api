@@ -32,6 +32,7 @@
     "eslint": "^4.13.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.0",
-    "gulp-mocha": "^4.3.1"
+    "gulp-mocha": "^4.3.1",
+    "pump": "^2.0.0"
   }
 }
