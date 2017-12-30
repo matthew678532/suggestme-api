@@ -1,4 +1,4 @@
-import { config, gulp, pump } from '../core.js'
+import { config, gulp, pump } from './../core.js'
 import lint from 'gulp-eslint'
 
 export default function eslint(cb) {
