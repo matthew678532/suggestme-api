@@ -118,7 +118,7 @@ module.exports = {
     "computed-property-spacing": [1, "never"],
     "func-call-spacing": [1, "never"],
     "func-name-matching": [2, {"includeCommonJSModuleExports": false}],
-    "function-paren-newline": [1, "never"],
+    "function-paren-newline": [1, "multiline"],
     "jsx-quotes": [1, "prefer-double"],
     "key-spacing": [1, {"afterColon": true}],
     "line-comment-position": [1, {"position": "above"}],

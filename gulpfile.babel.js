@@ -8,4 +8,11 @@ Object.keys(tasks).forEach((taskName) => {
   gulp.task(taskName, tasks[taskName])
 })
 
-gulp.task('default', gulp.series(config.ESLINT_TASK, config.JS_TASK))
+gulp.task(
+  'default',
+  gulp.series(
+    config.ESLINT_TASK,
+    config.MOCHA_TASK,
+    config.JS_TASK
+  )
+)
