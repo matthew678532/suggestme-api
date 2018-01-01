@@ -11,6 +11,7 @@ Object.keys(tasks).forEach((taskName) => {
 gulp.task(
   'default',
   gulp.series(
+    config.CLEAN_TASK,
     config.ESLINT_TASK,
     config.MOCHA_TASK,
     config.JS_TASK

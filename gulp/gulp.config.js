@@ -16,5 +16,6 @@ export default {
   // Task names
   JS_TASK: 'js',
   ESLINT_TASK: 'eslint',
-  MOCHA_TASK: 'mocha'
+  MOCHA_TASK: 'mocha',
+  CLEAN_TASK: 'clean'
 }
