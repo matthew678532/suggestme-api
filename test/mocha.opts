@@ -1,9 +1,0 @@
---colors
---bail
---use_strict
---reporter spec
---ui bdd
---timeout 500
---retries 1
---require babel-register
---require ./test/setup.js
