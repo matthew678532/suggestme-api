@@ -5,9 +5,12 @@ export default {
   SRC_MODULE: `${root}/src/module/**/*.js`,
   DIST: `${root}/dist`,
   NODE_MODULES: `${root}/node_modules/**`,
-  ESLINT_CONFIG: `${root}/.eslintrc.js`,
   TEST_UNIT: `${root}/test/unit/**/*[sS]pec.js`,
   TEST_INTEGRATION: `${root}/test/integration/**/*[sS]pec.js`,
+
+  // Option file paths
+  ESLINT_CONFIG: `${root}/.eslintrc.js`,
+
   // Task names
   JS_TASK: 'js',
   ESLINT_TASK: 'eslint',
