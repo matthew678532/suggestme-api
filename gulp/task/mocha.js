@@ -4,7 +4,7 @@ import mochaConfig from './../../test/mocha.config.js'
 
 export default function mocha(cb) {
   pump([
-    gulp.src([config.TEST_UNIT, config.TEST_INTEGRATION]),
+    gulp.src([config.TEST_UNIT_FILES, config.TEST_INTEGRATION_FILES]),
     gMocha(mochaConfig)
   ], cb)
 }

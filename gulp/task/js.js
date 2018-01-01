@@ -3,8 +3,8 @@ import gBabel from 'gulp-babel'
 
 export default function js(cb) {
   pump([
-    gulp.src(config.SRC_MODULE),
+    gulp.src(config.SRC_FILES),
     gBabel(),
-    gulp.dest(config.DIST)
+    gulp.dest(config.DIST_DIR)
   ], cb)
 }

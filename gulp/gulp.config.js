@@ -2,14 +2,16 @@ import { root } from './../global.config.js'
 
 export default {
   // File path globs
-  SRC_MODULE: `${root}/src/module/**/*.js`,
-  DIST: `${root}/dist`,
-  NODE_MODULES: `${root}/node_modules/**`,
-  TEST_UNIT: `${root}/test/unit/**/*[sS]pec.js`,
-  TEST_INTEGRATION: `${root}/test/integration/**/*[sS]pec.js`,
+  SRC_FILES: `${root}/src/**/*.js`,
+  TEST_UNIT_FILES: `${root}/test/unit/**/*[sS]pec.js`,
+  TEST_INTEGRATION_FILES: `${root}/test/integration/**/*[sS]pec.js`,
+  NODE_MODULES: `${root}/node_modules/**/*`,
 
   // Option file paths
   ESLINT_CONFIG: `${root}/.eslintrc.js`,
+
+  // Directory path globs
+  DIST_DIR: `${root}/dist`,
 
   // Task names
   JS_TASK: 'js',
