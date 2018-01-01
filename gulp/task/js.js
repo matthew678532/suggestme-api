@@ -1,10 +1,10 @@
 import { config, gulp, pump } from './../core.js'
-import babel from 'gulp-babel'
+import gBabel from 'gulp-babel'
 
 export default function js(cb) {
   pump([
     gulp.src(config.SRC_MODULE),
-    babel(),
+    gBabel(),
     gulp.dest(config.DIST)
   ], cb)
 }
