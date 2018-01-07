@@ -4,13 +4,11 @@
  */
 
 /**
- * getTaskNames - get the task names of
- * the gulp tasks.
- * @param  {Object} tasks an object containing
- * a collection of gulp tasks defined within
- * gulp/task.
- * @return {Array} an empty array if no tasks
- * exist, otherwise an
+ * getTaskNames - retrieve the task names of the defined gulp tasks.
+ * @param  {Object} tasks an object containing a collection of gulp tasks
+ * defined within gulp/task.
+ * @return {Array} an array of gulp tasks if they exist, otherwise an empty
+ * array is returned.
  */
 export function getTaskNames(tasks) {
   // todo

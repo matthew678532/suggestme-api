@@ -126,7 +126,7 @@ module.exports = {
     "lines-between-class-members": [1, "always"],
     "max-depth": [1, {"max": 4}],
     "max-len": [1, {
-      "code": 70,
+      "code": 80,
       "tabWidth": 2
     }],
     "max-nested-callbacks": [1, {"max": 3}],
