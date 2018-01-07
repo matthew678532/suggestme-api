@@ -4,7 +4,8 @@
   "description": "This repository contains the API development for the application suggestme.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "testfile": "babel-node ./test/testfile.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
     "restify": "^6.3.4"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
