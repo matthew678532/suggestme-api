@@ -43,22 +43,67 @@ export default class Util {
     return Object.prototype.toString.call(obj) === '[object Object]'
   }
 
+  /**
+   * @static isArray - a method to check whether an object passed is of type
+   * array. True is returned if the object passed is initialised via its
+   * constructor (i.e. new Array()), or using the bracket notation (i.e. []).
+   * @param  {Array} arr an array, bracket notation or via its constructor.
+   * @return {Boolean} a boolean indicating whether the passed arr is of type
+   * Array.
+   */
   static isArray(arr) {
     return Object.prototype.toString.call(arr) === '[object Array]'
   }
 
+  /**
+   * @static isString - a method to check whether an object passed is of type
+   * string. True is returned if the object passed is initialised via its
+   * constructor (i.e. new String()), or using the primitive alternative
+   * (i.e. "some string").
+   * @param  {String} str a string, primitive or via its constructor.
+   * @return {Boolean} a boolean indicating whether the passed str is of type
+   * String.
+   */
   static isString(str) {
     return Object.prototype.toString.call(str) === '[object String]'
   }
 
+  /**
+   * @static isNumber - a method to check whether an object passed is of type
+   * number. True is returned if the object passed is initialised via its
+   * constructor (i.e. new Number()), or using the primitive alternative
+   * (i.e. 10).
+   * @param  {Number} num a number, primitive or via its constructor.
+   * @return {Boolean} a boolean indicating whether the passed num is of type
+   * Number.
+   */
   static isNumber(num) {
     return Object.prototype.toString.call(num) === '[object Number]'
   }
 
+  /**
+   * @static isBoolean - a method to check whether an object passed is of type
+   * boolean. True is returned if the object passed is initialised via its
+   * constructor (i.e. new Boolean()), or using the primitive alternative
+   * (i.e. true).
+   * @param  {Boolean} bool a boolean, primitive or via its constructor.
+   * @return {Boolean} a boolean indicating whether the passed bool is of type
+   * Boolean.
+   */
   static isBoolean(bool) {
     return Object.prototype.toString.call(bool) === '[object Boolean]'
   }
 
+  /**
+   * @static isFunction - a method to check whether an object passed is of type
+   * function. True is returned if the object passed is initialised via its
+   * constructor (i.e. new Function()), or using a function declaration
+   * (i.e. function a() { ... }), or using a function expression
+   * (i.e. var a = function() { ... }).
+   * @param  {Function} func a function, constructor, declaration or expression.
+   * @return {Boolean} a boolean indicating whether the passed func is of type
+   * Function.
+   */
   static isFunction(func) {
     return Object.prototype.toString.call(func) === '[object Function]'
   }
