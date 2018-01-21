@@ -39,7 +39,6 @@ module.exports = {
 
     "block-scoped-var": 2,
     "array-callback-return": 1,
-    "complexity": [2, {max: 5}],
     "default-case": [2, {"commentPattern": "^skip\\sdefault"}],
     "dot-notation": 1,
     "eqeqeq": [2, "smart"],
@@ -103,7 +102,7 @@ module.exports = {
     "no-unused-vars": 1,
     "no-use-before-define": 1,
 
-    "indent": [2, 2],
+    "indent": [2, 2, {"SwitchCase": 1}],
     "linebreak-style": [1, "windows"],
     "quotes": [2, "single"],
     "semi": [2, "never"],

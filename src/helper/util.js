@@ -101,3 +101,43 @@ export function isPureObject(obj) {
          && !isBoolean(obj)
          && !isFunction(obj)
 }
+
+/**
+ * colors - an object containing console text color references.
+ */
+export const colors = {
+  white: '\x1b[37m',
+  blue: '\x1b[34m',
+  yellow: '\x1b[33m',
+  red: '\x1b[31m'
+}
+
+/**
+ * print - a method used to support the printing of messages to the
+ * console via a specified color.
+ * @param  {Object|String|Number|Boolean|Function|Array} msg a message to print
+ * to the console.
+ * @param  {String} color a string identifier representing a color
+ * @return {Undefined}
+ */
+export function print(msg, color) {
+  if (!isString(color)) {
+    console.log(Error('Invalid param(s)'))
+    return
+  }
+  const reset = '\x1b[0m'
+  switch(color) {
+    case colors.blue:
+      console.info(color, msg, reset)
+      break
+    case colors.yellow:
+      console.warn(color, msg, reset)
+      break
+    case colors.red:
+      console.error(color, msg, reset)
+      break
+    default:
+      console.log(color, msg, reset)
+      break
+  }
+}
