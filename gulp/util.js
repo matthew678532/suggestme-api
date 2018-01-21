@@ -3,7 +3,7 @@
  * @author Matthew Birch <matthew678532@gmail.com>
  */
 
-import * as Util from '../src/helper/util'
+import * as util from '../src/helper/util'
 
 /**
  * getTaskNames - retrieve the task names of the defined gulp tasks.
@@ -13,7 +13,7 @@ import * as Util from '../src/helper/util'
  * array is returned.
  */
 export function getTaskNames(tasks) {
-  if (!Util.isPureObject(tasks)) return []
+  if (!util.isPureObject(tasks)) return []
 
   const taskNames = Object.keys(tasks)
 
