@@ -1,10 +1,11 @@
 'use strict'
 
 import * as tasks from './gulp/tasks.js'
-import gulp from 'gulp'
-import config from './gulp/gulp.config.js'
+import { config, gulp, Util } from './gulp/core.js'
 
-Object.keys(tasks).forEach((taskName) => {
+const taskNames = Util.getTaskNames(tasks)
+
+taskNames.forEach((taskName) => {
   gulp.task(taskName, tasks[taskName])
 })
 
