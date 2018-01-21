@@ -1,4 +1,4 @@
-import { config, Util } from './../core.js'
+import { config, util } from './../core.js'
 
 export default function help() {
   

@@ -12,7 +12,7 @@ import * as util from '../src/helper/util'
  * @return {Array} an array of gulp tasks if they exist, otherwise an empty
  * array is returned.
  */
-export function getTaskNames(tasks) {
+util.getTaskNames = function(tasks) {
   if (!util.isPureObject(tasks)) return []
 
   const taskNames = Object.keys(tasks)
@@ -21,3 +21,5 @@ export function getTaskNames(tasks) {
 
   return taskNames
 }
+
+export { util }
