@@ -11,7 +11,7 @@
     "eslint": "eslint --cache --color ./src/**/*.js ./test/**/*.js",
     "copydir": "copyfiles -u 1 ./src/**/*.js ./src/*.js dist"
   },
-  "pre-commit": ["npm run eslint"],
+  "pre-commit": ["eslint"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/matthew678532/suggestme-api.git"
