@@ -1,3 +1,3 @@
-export default {
+module.exports = {
   // Config options go here
 }

@@ -6,3 +6,4 @@ node_modules/
 docs/
 testfile.js
 dist/
+.eslintcache

@@ -3,3 +3,4 @@ testfile.js
 template/
 docs/
 dist/
+**/*.config.js
