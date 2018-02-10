@@ -3,8 +3,6 @@
  * @author Matthew Birch <matthew678532@gmail.com>
  */
 
- const constant = localRequire('constant')
-
 /**
  * isObject - a method to check whether an object passed is a
  * generic object. This check is weaker than isPureObject and will
@@ -15,7 +13,7 @@
  * Object.
  */
 function isObject(obj) {
-  return Object.prototype.toString.call(obj) === constant.IS_OBJECT_STRING
+  return obj && obj.constructor ? obj.constructor === Object : false
 }
 
 /**
@@ -27,7 +25,7 @@ function isObject(obj) {
  * Array.
  */
 function isArray(arr) {
-  return Object.prototype.toString.call(arr) === constant.IS_ARRAY_STRING
+  return arr && arr.constructor ? arr.constructor === Array : false
 }
 
 /**
@@ -40,7 +38,7 @@ function isArray(arr) {
  * String.
  */
 function isString(str) {
-  return Object.prototype.toString.call(str) === constant.IS_STRING_STRING
+  return str && str.constructor ? str.constructor === String : false
 }
 
 /**
@@ -53,7 +51,7 @@ function isString(str) {
  * Number.
  */
 function isNumber(num) {
-  return Object.prototype.toString.call(num) === constant.IS_NUMBER_STRING
+  return num && num.constructor ? num.constructor === Number : false
 }
 
 /**
@@ -66,7 +64,7 @@ function isNumber(num) {
  * Boolean.
  */
 function isBoolean(bool) {
-  return Object.prototype.toString.call(bool) === constant.IS_BOOLEAN_STRING
+  return bool && bool.constructor ? bool.constructor === Boolean : false
 }
 
 /**
@@ -80,28 +78,7 @@ function isBoolean(bool) {
  * Function.
  */
 function isFunction(func) {
-  return Object.prototype.toString.call(func) === constant.IS_FUNCTION_STRING
-}
-
-/**
- * isPureObject - used to check whether a passed object is pure. By
- * pure we mean a custom object instantiated either by curly brace
- * syntax ({}) or via its constructor (new CustomObject()). The following
- * Objects instantiations are excluded: new String(), new Number(), new
- * Boolean(), and new Function() as these are not what we consider pure. There
- * exists some edge cases which work around our defintion of pure such as:
- * new Date(), and new Math() which if passed returns true, which are to be
- * accounted for at a later date.
- * @param  {Object} obj an object literal, or call to a constructor.
- * @return {Boolean} a boolean indicating whether the passed obj is pure or
- * not.
- */
-function isPureObject(obj) {
-  return !isArray(obj)
-         && !isString(obj)
-         && !isNumber(obj)
-         && !isBoolean(obj)
-         && !isFunction(obj)
+  return func && func.constructor ? func.constructor === Function : false
 }
 
 /**
@@ -151,7 +128,6 @@ module.exports = {
   isNumber,
   isBoolean,
   isFunction,
-  isPureObject,
   colors,
   print
 }
