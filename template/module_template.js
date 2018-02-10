@@ -1,13 +1,15 @@
-import * as { module } from { package };
-import { module } from { package };
+// Node package require
+const module = require('package');
+// Local user-defined package/module require
+const module = require('path/to/module');
 
-export function { methodName }(...params) {
+exports.{ methodName } = function(...params) {
   return new Promise((resolve, reject) => {
     // Function Body...
   })
 }
 
-export default class { className } {
+exports.{ className } = class {
   constructor(opts) {
     super(opts);
   }

@@ -1,5 +1,7 @@
-import * as { module } from { package };
-import { module } from { package };
+// Node package require
+const module = require('package');
+// Local user-defined package/module require
+const module = require('path/to/module');
 
 describe('{ moduleName } unit tests', function() {
   describe('Some similar functions', function() {
@@ -27,7 +29,7 @@ describe('{ moduleName } unit tests', function() {
 
   describe('Some class methods', function() {
     beforeEach() {
-      let myClass = new module.MyClass();
+      let myClass = new Class();
     }
 
     afterEach() {
