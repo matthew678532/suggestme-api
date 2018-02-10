@@ -9,7 +9,7 @@ const chai = require('chai')
  * readibility as this is appended automatically).
  * @return {Object} the exported contents of a file.
  */
-global.req = function(name) {
+global.localRequire = function(name) {
   return require(path.resolve(__dirname, name))
 }
 
