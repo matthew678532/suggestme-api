@@ -4,9 +4,12 @@
   "description": "This repository contains the API development for the application suggestme.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run test:unit && npm run test:integration",
+    "test:unit": "mocha ./test/unit/**/*.test.js",
+    "test:integration": "mocha ./test/integration/**/*.test.js",
     "testfile": "node ./test/testfile.js",
-    "eslint": "eslint --cache --color ./src/**/*.js ./test/**/*.js"
+    "eslint": "eslint --cache --color ./src/**/*.js ./test/**/*.js",
+    "copydir": "copyfiles -u 1 ./src/**/*.js ./src/*.js dist"
   },
   "repository": {
     "type": "git",
@@ -31,6 +34,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
+    "copyfiles": "^1.2.0",
     "del": "^3.0.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-babel": "^7.0.0",
