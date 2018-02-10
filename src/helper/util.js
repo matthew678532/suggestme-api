@@ -3,6 +3,8 @@
  * @author Matthew Birch <matthew678532@gmail.com>
  */
 
+ const constant = localRequire('constant')
+
 /**
  * isObject - a method to check whether an object passed is a
  * generic object. This check is weaker than isPureObject and will
@@ -12,8 +14,8 @@
  * @return {Boolean} a boolean indicating whether the passed obj is of type
  * Object.
  */
-export function isObject(obj) {
-  return Object.prototype.toString.call(obj) === '[object Object]'
+function isObject(obj) {
+  return Object.prototype.toString.call(obj) === constant.IS_OBJECT_STRING
 }
 
 /**
@@ -24,8 +26,8 @@ export function isObject(obj) {
  * @return {Boolean} a boolean indicating whether the passed arr is of type
  * Array.
  */
-export function isArray(arr) {
-  return Object.prototype.toString.call(arr) === '[object Array]'
+function isArray(arr) {
+  return Object.prototype.toString.call(arr) === constant.IS_ARRAY_STRING
 }
 
 /**
@@ -37,8 +39,8 @@ export function isArray(arr) {
  * @return {Boolean} a boolean indicating whether the passed str is of type
  * String.
  */
-export function isString(str) {
-  return Object.prototype.toString.call(str) === '[object String]'
+function isString(str) {
+  return Object.prototype.toString.call(str) === constant.IS_STRING_STRING
 }
 
 /**
@@ -50,8 +52,8 @@ export function isString(str) {
  * @return {Boolean} a boolean indicating whether the passed num is of type
  * Number.
  */
-export function isNumber(num) {
-  return Object.prototype.toString.call(num) === '[object Number]'
+function isNumber(num) {
+  return Object.prototype.toString.call(num) === constant.IS_NUMBER_STRING
 }
 
 /**
@@ -63,8 +65,8 @@ export function isNumber(num) {
  * @return {Boolean} a boolean indicating whether the passed bool is of type
  * Boolean.
  */
-export function isBoolean(bool) {
-  return Object.prototype.toString.call(bool) === '[object Boolean]'
+function isBoolean(bool) {
+  return Object.prototype.toString.call(bool) === constant.IS_BOOLEAN_STRING
 }
 
 /**
@@ -77,8 +79,8 @@ export function isBoolean(bool) {
  * @return {Boolean} a boolean indicating whether the passed func is of type
  * Function.
  */
-export function isFunction(func) {
-  return Object.prototype.toString.call(func) === '[object Function]'
+function isFunction(func) {
+  return Object.prototype.toString.call(func) === constant.IS_FUNCTION_STRING
 }
 
 /**
@@ -94,7 +96,7 @@ export function isFunction(func) {
  * @return {Boolean} a boolean indicating whether the passed obj is pure or
  * not.
  */
-export function isPureObject(obj) {
+function isPureObject(obj) {
   return !isArray(obj)
          && !isString(obj)
          && !isNumber(obj)
@@ -105,7 +107,7 @@ export function isPureObject(obj) {
 /**
  * colors - an object containing console text color references.
  */
-export const colors = {
+const colors = {
   white: '\x1b[37m',
   blue: '\x1b[34m',
   yellow: '\x1b[33m',
@@ -120,7 +122,7 @@ export const colors = {
  * @param  {String} color a string identifier representing a color
  * @return {Undefined}
  */
-export function print(msg, color) {
+function print(msg, color) {
   if (!isString(color)) {
     console.log(Error('Invalid param(s)'))
     return
@@ -140,4 +142,16 @@ export function print(msg, color) {
       console.log(color, msg, reset)
       break
   }
+}
+
+module.exports = {
+  isObject,
+  isArray,
+  isString,
+  isNumber,
+  isBoolean,
+  isFunction,
+  isPureObject,
+  colors,
+  print
 }
