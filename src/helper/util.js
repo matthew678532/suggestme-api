@@ -81,14 +81,13 @@ function isFunction(func) {
   return func && func.constructor ? func.constructor === Function : false
 }
 
-/**
- * colors - an object containing console text color references.
- */
+// colors - an object containing console text color references, and resets.
 const colors = {
   white: '\x1b[37m',
   blue: '\x1b[34m',
   yellow: '\x1b[33m',
-  red: '\x1b[31m'
+  red: '\x1b[31m',
+  reset: '\x1b[0m'
 }
 
 /**
@@ -104,23 +103,24 @@ function print(msg, color) {
     console.log(Error('Invalid param(s)'))
     return
   }
-  const reset = '\x1b[0m'
+
   switch(color) {
     case colors.blue:
-      console.info(color, msg, reset)
+      console.info(color, msg, colors.reset)
       break
     case colors.yellow:
-      console.warn(color, msg, reset)
+      console.warn(color, msg, colors.reset)
       break
     case colors.red:
-      console.error(color, msg, reset)
+      console.error(color, msg, colors.reset)
       break
     default:
-      console.log(color, msg, reset)
+      console.log(color, msg, colors.reset)
       break
   }
 }
 
+// exported utility data
 module.exports = {
   isObject,
   isArray,
