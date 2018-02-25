@@ -1,3 +1,3 @@
 module.exports = {
-  // global config options go here
+  version: 0.0
 }
