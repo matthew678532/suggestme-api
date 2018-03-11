@@ -1,13 +1,41 @@
 version: 2
 
 jobs:
-  build:
+  build-app:
     docker:
       - image: circleci/node:8
 
     steps:
       - checkout
-      - run: npm install
-      - run: npm test
-      # need to add in a coverage tool
-      # - run: npm coverage
+      - working_directory: .
+      - run:
+        - name: Install dependencies
+        - command: npm install
+      - run:
+        - name: Run tests
+        - command: npm test
+      # TODO: Implement coverage tool
+      # - run:
+      #   - name: Run coverage tool
+      #   - command: npm coverage
+
+  deploy-app:
+    steps:
+      - run:
+        - name: Setup heroku
+        - command: sh ./heroku/setup.sh
+      - run:
+        - name: Deploy to heroku
+        - command: sh ./heroku/deploy.sh
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build-app
+      - deploy-app
+        requires:
+          - build-app
+        filters:
+          branches:
+            only: master
