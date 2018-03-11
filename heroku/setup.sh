@@ -1,4 +1,4 @@
-#!/bin/sh -e
+!/bin/sh -e
 
 OS_TYPE=""
 
@@ -26,3 +26,16 @@ rm heroku.tar.gz
 mkdir -p /usr/local/lib /usr/local/bin
 mv heroku-cli-* /usr/local/lib/heroku
 ln -s /usr/local/lib/heroku/bin/heroku /usr/local/bin/heroku
+
+if ! [[ "$(git remote -v)" == *"heroku"* ]]; then
+    git remote add heroku https://git.heroku.com/suggestme-api.git
+fi
+
+cat > ~/.netrc << EOF
+machine api.heroku.com
+    login $HEROKU_LOGIN
+    password $HEROKU_API_KEY
+machine git.heroku.com
+    login $HEROKU_LOGIN
+    password $HEROKU_API_KEY
+EOF
